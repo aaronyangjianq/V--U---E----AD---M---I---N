@@ -1,0 +1,113 @@
+{
+  "name": "stdroom-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:pre": "vue-cli-service build --mode preview",
+    "deploy": "npm run build && gh-pages -t -b dist -d dist",
+    "deploy:pre": "npm run build:pre && gh-pages -t -b dist-dev -d dist",
+    "analyz": "npm run build:pre && webpack-bundle-analyzer -p 8021 ./dist/stats.json",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "ant-design-vue": "~1.5.5",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "enquire.js": "^2.1.6",
+    "lodash.get": "^4.4.2",
+    "vue": "^2.6.11",
+    "vue-ls": "^3.2.1",
+    "vue-router": "^3.3.1",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.0",
+    "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-service": "^4.3.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^2.2.0",
+    "less": "^3.11.1",
+    "less-loader": "5.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^3.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "generator-star-spacing": "off",
+      "no-mixed-operators": 0,
+      "no-trailing-spaces": 0,
+      "camelcase": 0,
+      "vue/max-attributes-per-line": [
+        2,
+        {
+          "singleline": 5,
+          "multiline": {
+            "max": 1,
+            "allowFirstLine": false
+          }
+        }
+      ],
+      "vue/attribute-hyphenation": 0,
+      "vue/html-self-closing": 0,
+      "vue/component-name-in-template-casing": 0,
+      "vue/html-closing-bracket-spacing": 0,
+      "vue/singleline-html-element-content-newline": 0,
+      "vue/no-unused-components": 0,
+      "vue/multiline-html-element-content-newline": 0,
+      "vue/no-use-v-if-with-v-for": 0,
+      "vue/html-closing-bracket-newline": 0,
+      "vue/no-parsing-error": 0,
+      "vue/require-default-prop": 0,
+      "no-console": 0,
+      "no-tabs": 0,
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ],
+      "no-unused-vars": [
+        0,
+        {
+          "vars": "local",
+          "args": "none"
+        }
+      ],
+      "standard/no-callback-literal": 0,
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-delete-var": 2,
+      "prefer-const": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
