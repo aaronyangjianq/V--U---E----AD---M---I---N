@@ -14,7 +14,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.1",
     "ant-design-vue": "~1.5.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "enquire.js": "^2.1.6",
     "lodash.get": "^4.4.2",
